@@ -1,0 +1,57 @@
+{
+  "name": "auto_log_time",
+  "version": "1.0.0",
+  "description": "Auto check and run log time on STS system",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "babel -w src/ -d dist/",
+    "build": "babel src/ -d dist/ & cp -f src/config.json dist/config.json",
+    "serve": "babel -w src/ -d dist/ | nodemon --watch dist dist/server.js"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module"
+    },
+    "env": {
+      "node": true
+    },
+    "rules": {
+      "no-console": 0,
+      "no-unused-vars": 1
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime": "^7.4.3",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-react-views": "^0.11.0",
+    "moment": "^2.24.0",
+    "node-cron": "^2.0.3",
+    "puppeteer": "^1.14.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "sequelize": "^5.2.12",
+    "sqlite3": "^4.0.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "nodemon": "^1.18.10",
+    "sequelize-cli": "^5.4.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "port": 8231,
+    "bodyLimit": "100kb",
+	"corsHeaders": ["Link"],
+    "credential" : {
+        "username" : "",
+        "password" : ""
+    },
+    "projectSettings": [
+        {
+            "projectId": 414,
+            "hours": 8,
+            "hourRate": 1
+        }
+    ]
+}
