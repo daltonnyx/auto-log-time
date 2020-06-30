@@ -1,4 +1,4 @@
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
 import config from '../config.json';
 
 export default class IdentityService {
@@ -6,6 +6,7 @@ export default class IdentityService {
     return new Promise(async (resolve, reject) => {
       try {
         const browser = await puppeteer.launch({
+          executablePath: "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
           headless: true
         });
         const page = await browser.newPage();

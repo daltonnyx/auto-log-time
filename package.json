@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "babel -w src/ -d dist/",
-    "build": "babel src/ -d dist/ & cp -f src/config.json dist/config.json",
+    "build": "babel src/ -d dist/",
     "serve": "babel -w src/ -d dist/ | nodemon --watch dist dist/server.js"
   },
   "eslintConfig": {
@@ -36,7 +36,7 @@
     "express-react-views": "^0.11.0",
     "moment": "^2.24.0",
     "node-cron": "^2.0.3",
-    "puppeteer": "^1.14.0",
+    "puppeteer-core": "^4.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "sequelize": "^5.2.12",
